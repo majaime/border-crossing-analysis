@@ -2,6 +2,7 @@ package com.mohammadaminjavadi;
 
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.io.PrintWriter;
 import java.util.Scanner;
 
 public class Main {
@@ -51,6 +52,16 @@ public class Main {
                     System.out.println("US-Mexico Border," + "01/01/2019 12:00:00 AM," + "Pedestrians," + x6 + "," + 0);
                 }
             }
+
+            PrintWriter printWriter = new PrintWriter(new File("src\\report.csv"));
+            StringBuilder rp = new StringBuilder();
+            rp.append("a1_rp");
+            rp.append("a2_rp");
+
+            printWriter.write(rp.toString());
+            printWriter.close();
+            System.out.println("CSV Created");
+
         } catch (NumberFormatException e) {
             e.printStackTrace();
         }
