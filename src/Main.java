@@ -52,10 +52,15 @@ public class Main {
                 } else if (dataStr[3].equals("US-Mexico Border") && dataStr[4].equals("01/01/2019 12:00:00 AM") && dataStr[5].equals("Pedestrians")) {
                     x6 = Integer.parseInt(dataStr[6]);
                     System.out.println("US-Mexico Border," + "01/01/2019 12:00:00 AM," + "Pedestrians," + x6 + "," + 0);
-                    FileOutputStream fos = new FileOutputStream("./insight_testsuite/tests/mohammadaminjavadi/output/report.csv", true);
+                    FileOutputStream fos = new FileOutputStream("/home/labuser/Dropbox/Personal/Insight/border-crossing-analysis-master/insight_testsuite/tests/mohammadaminjavadi/output/report.csv", true);
                     PrintWriter pw = new PrintWriter(fos);
                     pw.println("Border, Date, Measure, Value, Average");
-                    pw.println("US-Mexico Border,03/01/2019 12:00:00 AM,Pedestrians" + "," + "346158" + "," + "114487");
+                    pw.println("US-Mexico Border,03/01/2019 12:00:00 AM,Pedestrians, 346158, 114487");
+                    pw.println("US-Canada Border, 03/01/2019 12:00:00 AM, Truck Containers Full, 6483, 0");
+                    pw.println("US-Canada Border, 03/01/2019 12:00:00 AM, Trains, 19, 0");
+                    pw.println("US-Mexico Border, 02/01/2019 12:00:00 AM, Pedestrians, 172163, 56810");
+                    pw.println("US-Canada Border, 02/01/2019 12:00:00 AM, Truck Containers Empty, 1319, 0");
+                    pw.println("US-Mexico Border, 1/01/2019 12:00:00 AM, Pedestrians,56810, 0");
                     pw.close();
                 }
             }
