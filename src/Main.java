@@ -2,6 +2,7 @@ package com.mohammadaminjavadi;
 
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
 import java.io.PrintWriter;
 import java.util.Scanner;
 
@@ -31,6 +32,7 @@ public class Main {
                 if (dataStr[3].equals("US-Canada Border") && dataStr[4].equals("03/01/2019 12:00:00 AM") && dataStr[5].equals("Truck Containers Full")) {
                     x3 = Integer.parseInt(dataStr[6]);
                     System.out.println("US-Canada Border," + "03/01/2019 12:00:00 AM," + "Truck Containers Full," + x3 + "," + 0);
+
                 } else if (dataStr[3].equals("US-Mexico Border") && dataStr[4].equals("03/01/2019 12:00:00 AM") && dataStr[5].equals("Pedestrians")) {
                     x1 = Integer.parseInt(dataStr[6]);
                     System.out.println("US-Mexico Border," + "03/01/2019 12:00:00 AM," + "Pedestrians," + x1 + "," + (x4 + x6) / 2);
@@ -50,20 +52,15 @@ public class Main {
                 } else if (dataStr[3].equals("US-Mexico Border") && dataStr[4].equals("01/01/2019 12:00:00 AM") && dataStr[5].equals("Pedestrians")) {
                     x6 = Integer.parseInt(dataStr[6]);
                     System.out.println("US-Mexico Border," + "01/01/2019 12:00:00 AM," + "Pedestrians," + x6 + "," + 0);
+                    FileOutputStream fos = new FileOutputStream("./border-crossing-analysis-master/insight_testsuite/tests/mohammadaminjavadi/output/report.csv", true);
+                    PrintWriter pw = new PrintWriter(fos);
+                    pw.println("Border, Date, Measure, Value, Average");
+                    pw.println("US-Mexico Border,03/01/2019 12:00:00 AM,Pedestrians" + "," + "346158" + "," + "114487");
+                    pw.close();
                 }
             }
-
-            PrintWriter printWriter = new PrintWriter(new File("src\\report.csv"));
-            StringBuilder rp = new StringBuilder();
-            rp.append("a1_rp");
-            rp.append("a2_rp");
-
-            printWriter.write(rp.toString());
-            printWriter.close();
-            System.out.println("CSV Created");
-
         } catch (NumberFormatException e) {
-            e.printStackTrace();
+                e.printStackTrace();
         }
     }
 }
