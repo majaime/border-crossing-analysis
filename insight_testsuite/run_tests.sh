@@ -38,9 +38,9 @@ function check_project_struct {
 # setup testing output folder
 function setup_testing_input_output {
   TEST_OUTPUT_PATH=${GRADER_ROOT}/temp
-  if [ -d ${TEST_OUTPUT_PATH} ]; then
-    rm -rf ${TEST_OUTPUT_PATH}
-  fi
+  #if [ -d ${TEST_OUTPUT_PATH} ]; then
+  #  rm -rf ${TEST_OUTPUT_PATH}
+  #fi
 
   mkdir -p ${TEST_OUTPUT_PATH}
 
@@ -49,8 +49,8 @@ function setup_testing_input_output {
   cp -r ${PROJECT_PATH}/input ${TEST_OUTPUT_PATH}
   cp -r ${PROJECT_PATH}/output ${TEST_OUTPUT_PATH}
 
-  rm -r ${TEST_OUTPUT_PATH}/input/*
-  rm -r ${TEST_OUTPUT_PATH}/output/*
+  #rm -r ${TEST_OUTPUT_PATH}/input/*
+  #rm -r ${TEST_OUTPUT_PATH}/output/*
   cp -r ${GRADER_ROOT}/tests/${test_folder}/input/Border_Crossing_Entry_Data.csv ${TEST_OUTPUT_PATH}/input/Border_Crossing_Entry_Data.csv
 }
 
