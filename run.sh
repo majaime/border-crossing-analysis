@@ -5,6 +5,8 @@
 #cd ./src
 #avac ./src/com/mohammadaminjavadi/Main.java #"./input/Border_Crossing_Entry_data.csv" "./output/report.csv"
 javac ./src/Main.java
+java -version
+javac -version
 
 #javac -cp ./src/gson-2.6.2.jar ./src/Tweet.java ./src/HashtagGraph.java ./src/Run.java
 
