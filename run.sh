@@ -4,4 +4,4 @@
 # python3.7 ./src/border_analytics.py ./input/Border_Crossing_Entry_data.csv ./output/report.csv
 #cd ./src
 javac ./src/com/mohammadaminjavadi/Main.java #./input/Border_Crossing_Entry_data.csv ./output/report.csv
-#java Main
+java Main
