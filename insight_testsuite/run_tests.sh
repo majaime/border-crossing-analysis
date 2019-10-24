@@ -97,5 +97,5 @@ function run_all_tests {
   echo "[$(date)] ${PASS_CNT} of ${NUM_TESTS} tests passed" >> ${GRADER_ROOT}/results.txt
 }
 
-check_project_struct
+# check_project_struct
 # run_all_tests
