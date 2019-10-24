@@ -37,7 +37,7 @@ function check_project_struct {
 
 # setup testing output folder
 function setup_testing_input_output {
-  TEST_OUTPUT_PATH=${GRADER_ROOT}/temp
+  TEST_OUTPUT_PATH=${GRADER_ROOT}
 
   mkdir -p ${TEST_OUTPUT_PATH}
 
