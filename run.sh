@@ -8,4 +8,4 @@
 
 #javac -cp ./src/gson-2.6.2.jar ./src/Tweet.java ./src/HashtagGraph.java ./src/Run.java
 
-java -cp ./src/Main ./input/Border_Crossing_Entry_data.csv ./output/report.csv
+java -cp ./src/Main ./output/report.csv
