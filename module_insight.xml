@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="module_insight" default="compile.module.insight">
+  <dirname property="module.insight.basedir" file="${ant.file.module_insight}"/>
+  
+  <property name="module.jdk.home.insight" value="${project.jdk.home}"/>
+  <property name="module.jdk.bin.insight" value="${project.jdk.bin}"/>
+  <property name="module.jdk.classpath.insight" value="${project.jdk.classpath}"/>
+  
+  <property name="compiler.args.insight" value="-encoding UTF-8 -source 11 -target 11 ${compiler.args}"/>
+  
+  <property name="insight.output.dir" value="${module.insight.basedir}/out/production/Insight"/>
+  <property name="insight.testoutput.dir" value="${module.insight.basedir}/out/test/Insight"/>
+  
+  <path id="insight.module.bootclasspath">
+    <!-- Paths to be included in compilation bootclasspath -->
+  </path>
+  
+  <path id="insight.module.production.classpath">
+    <path refid="${module.jdk.classpath.insight}"/>
+  </path>
+  
+  <path id="insight.runtime.production.module.classpath">
+    <pathelement location="${insight.output.dir}"/>
+  </path>
+  
+  <path id="insight.module.classpath">
+    <path refid="${module.jdk.classpath.insight}"/>
+    <pathelement location="${insight.output.dir}"/>
+  </path>
+  
+  <path id="insight.runtime.module.classpath">
+    <pathelement location="${insight.testoutput.dir}"/>
+    <pathelement location="${insight.output.dir}"/>
+  </path>
+  
+  
+  <patternset id="excluded.from.module.insight">
+    <patternset refid="ignored.files"/>
+  </patternset>
+  
+  <patternset id="excluded.from.compilation.insight">
+    <patternset refid="excluded.from.module.insight"/>
+  </patternset>
+  
+  <path id="insight.module.sourcepath">
+    <dirset dir="${module.insight.basedir}">
+      <include name="src"/>
+    </dirset>
+  </path>
+  
+  
+  <target name="compile.module.insight" depends="compile.module.insight.production,compile.module.insight.tests" description="Compile module Insight"/>
+  
+  <target name="compile.module.insight.production" depends="register.custom.compilers" description="Compile module Insight; production classes">
+    <mkdir dir="${insight.output.dir}"/>
+    <javac2 destdir="${insight.output.dir}" debug="${compiler.debug}" nowarn="${compiler.generate.no.warnings}" memorymaximumsize="${compiler.max.memory}" fork="true" executable="${module.jdk.bin.insight}/javac">
+      <compilerarg line="${compiler.args.insight}"/>
+      <bootclasspath refid="insight.module.bootclasspath"/>
+      <classpath refid="insight.module.production.classpath"/>
+      <src refid="insight.module.sourcepath"/>
+      <patternset refid="excluded.from.compilation.insight"/>
+    </javac2>
+    
+    <copy todir="${insight.output.dir}">
+      <fileset dir="${module.insight.basedir}/src">
+        <patternset refid="compiler.resources"/>
+        <type type="file"/>
+      </fileset>
+    </copy>
+  </target>
+  
+  <target name="compile.module.insight.tests" depends="register.custom.compilers,compile.module.insight.production" description="compile module Insight; test classes" unless="skip.tests"/>
+  
+  <target name="clean.module.insight" description="cleanup module">
+    <delete dir="${insight.output.dir}"/>
+    <delete dir="${insight.testoutput.dir}"/>
+  </target>
+</project>
