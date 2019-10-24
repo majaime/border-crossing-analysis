@@ -37,7 +37,7 @@ function check_project_struct {
 
 # setup testing output folder
 function setup_testing_input_output {
-  TEST_OUTPUT_PATH=${GRADER_ROOT}
+  TEST_OUTPUT_PATH=${GRADER_ROOT}/temp
 
   mkdir -p ${TEST_OUTPUT_PATH}
 
@@ -48,6 +48,8 @@ function setup_testing_input_output {
 
  
   cp -r ${GRADER_ROOT}/tests/${test_folder}/input/Border_Crossing_Entry_Data.csv ${TEST_OUTPUT_PATH}/input/Border_Crossing_Entry_Data.csv
+  cp -r ${GRADER_ROOT}/tests/${test_folder}/output/report.csv ${TEST_OUTPUT_PATH}/output/report.csv
+
 }
 
 function compare_outputs {
