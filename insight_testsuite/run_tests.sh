@@ -43,6 +43,7 @@ function setup_testing_input_output {
   fi
 
   mkdir -p ${TEST_OUTPUT_PATH}
+  mkdir -p ${TEST_OUTPUT_PATH}/output
 
   cp -r ${PROJECT_PATH}/src ${TEST_OUTPUT_PATH}
   cp -r ${PROJECT_PATH}/run.sh ${TEST_OUTPUT_PATH}
