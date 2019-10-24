@@ -6,12 +6,6 @@
 #javac ./src/com/mohammadaminjavadi/Main.java #"./input/Border_Crossing_Entry_data.csv" "./output/report.csv"
 #java ./src/Main
 
-if [ ! -f ./src/gson-2.6.2.jar ]; then
-	printf "Downloading dependency: gson-2.6.2.jar\n\n"
-	curl -o ./src/gson-2.6.2.jar "http://central.maven.org/maven2/com/google/code/gson/gson/2.6.2/gson-2.6.2.jar"
-	printf "Finished downloading\n\n"
-fi
-
 #javac -cp ./src/gson-2.6.2.jar ./src/Tweet.java ./src/HashtagGraph.java ./src/Run.java
 
-java -cp ./src/gson-2.6.2.jar:./src Main ./input/Border_Crossing_Entry_data.csv ./output/report.csv
+java -cp ./src Main ./input/Border_Crossing_Entry_data.csv ./output/report.csv
