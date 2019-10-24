@@ -88,7 +88,7 @@ function run_all_tests {
     setup_testing_input_output
 
     cd ${GRADER_ROOT}/temp
-    bash run.sh 3>&2
+    bash run.sh 30>&2
     cd ../
 
     compare_outputs
