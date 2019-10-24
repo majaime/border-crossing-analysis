@@ -1,3 +1,5 @@
+package com.mohammadaminjavadi;
+
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
@@ -63,7 +65,7 @@ public class Main {
                 }
             }
         } catch (NumberFormatException e) {
-                e.printStackTrace();
+            e.printStackTrace();
         }
     }
 }
