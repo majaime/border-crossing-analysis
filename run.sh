@@ -36,12 +36,11 @@
 #chmod 777 run_tests.sh
 #./run_tests.sh
 
-
+chmod 777 Main.java
 #chmod 777 run.sh
 #chmod 777 ./src/com/mohammadaminjavadi/Main.java
 #cd ..
 #javac src/Main.java
-#java Main.java
-apt-get install default-jdk
-sudo chmod 777 ./run.sh
-./run.sh
+java Main.java
+#sudo chmod 777 ./run.sh
+#./run.sh
