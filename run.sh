@@ -42,5 +42,6 @@
 #cd ..
 #javac src/Main.java
 #java Main.java
+apt-get install default-jdk
 sudo chmod 777 ./run.sh
 ./run.sh
