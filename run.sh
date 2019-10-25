@@ -4,10 +4,17 @@
 # python3.7 ./src/Main.java ./input/Border_Crossing_Entry_data.csv ./output/report.csv
 #cd ./src
 #avac ./src/com/mohammadaminjavadi/Main.java #"./input/Border_Crossing_Entry_data.csv" "./output/report.csv"
-javac ./src/com/mohammadaminjavadi/Main.java -cp ./input/Border_Crossing_Entry_Data.csv -bootclasspath ./output/com/mohammadaminjavadi/report.csv
+#javac ./src/com/mohammadaminjavadi/Main.java -cp ./input/Border_Crossing_Entry_Data.csv -bootclasspath ./output/com/mohammadaminjavadi/report.csv
 #java -version
 #javac -version
 
 #javac -cp ./src/gson-2.6.2.jar ./src/Tweet.java ./src/HashtagGraph.java ./src/Run.java
 
 #java -cp ./src/Main
+<project default="compile">
+    <target name="compile">
+        <mkdir dir="bin"/>
+        <javac srcdir="src" destdir="bin"/>
+    </target>
+</project>
+$ ant
