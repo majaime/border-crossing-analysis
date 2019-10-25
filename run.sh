@@ -28,7 +28,7 @@
 #git clone https://github.com/JetBrains/intellij-community
 
 find ${PROJECT_DIR} -name "*.java" -print | xargs javac -g -classpath ${BUILT_PRODUCTS_DIR} -d ${BUILT_PRODUCTS_DIR}
-chmod 777 'insight_testsuite'
+sudo chmod 777 'insight_testsuite'
 cd 'insight_testsuite'
 #chmod 777 run_tests.sh
 #./run_tests.sh
