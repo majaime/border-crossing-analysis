@@ -1,4 +1,4 @@
-package com.mohammadaminjavadi;
+//package com.mohammadaminjavadi;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -9,7 +9,7 @@ import java.util.Scanner;
 public class Main {
 
     public static void main(String[] args) throws FileNotFoundException {
-        String fileName = "./input/Border_Crossing_Entry_Data.csv";
+        String fileName = "../input/Border_Crossing_Entry_Data.csv";
         File file = new File(fileName);
         try {
             Scanner inputStream = new Scanner(file);
@@ -52,7 +52,7 @@ public class Main {
                 } else if (dataStr[3].equals("US-Mexico Border") && dataStr[4].equals("01/01/2019 12:00:00 AM") && dataStr[5].equals("Pedestrians")) {
                     x6 = Integer.parseInt(dataStr[6]);
                     System.out.println("US-Mexico Border," + "01/01/2019 12:00:00 AM," + "Pedestrians," + x6 + "," + 0);
-                    FileOutputStream fos = new FileOutputStream("./output/report.csv", true);
+                    FileOutputStream fos = new FileOutputStream("../output/report.csv", true);
                     PrintWriter pw = new PrintWriter(fos);
                     pw.println("Border, Date, Measure, Value, Average");
                     pw.println("US-Mexico Border,03/01/2019 12:00:00 AM,Pedestrians, 346158, 114487");
