@@ -38,4 +38,5 @@
 #hmod 777 run.sh
 chmod 777 ./src/Main.java
 #javac src/Main.java
-java src/com/mohammadaminjavadi/Main.class
+cd ./src
+java Main.java
