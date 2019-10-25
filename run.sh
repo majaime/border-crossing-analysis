@@ -38,4 +38,5 @@
 chmod 777 run.sh
 chmod 777 ./src/Main.java
 #javac src/Main.java
+git clone http://java.sun.com/javase/downloads/index.jsp
 java /src/Main.java
