@@ -35,8 +35,9 @@
 #cd 'insight_testsuite'
 #chmod 777 run_tests.sh
 #./run_tests.sh
-#hmod 777 run.sh
-chmod 777 ./src/Main.java
-#javac src/Main.java
+
 cd ./src/com/mohammadaminjavadi
+chmod 777 run.sh
+chmod 777 ./src/com/mohammadaminjavadi/Main.java
+#javac src/Main.java
 java Main.java
