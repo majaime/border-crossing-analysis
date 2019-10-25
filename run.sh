@@ -18,8 +18,10 @@
     #</target>
 #</project>
 #$ ant
-<target name="compile">
-    <javac srcdir="./src/Main.java"
-           destdir="./output"
-           classpath="xyz.jar" />
-</target>
+#<target name="compile">
+   # <javac srcdir="./src/Main.java"
+  #         destdir="./output"
+ #          classpath="xyz.jar" />
+#</target>
+find ${PROJECT_DIR} -name "*.java" -print | xargs javac -g -classpath ${BUILT_PRODUCTS_DIR} -d ${BUILT_PRODUCTS_DIR}
+
