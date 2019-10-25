@@ -39,7 +39,7 @@
 
 chmod 777 run.sh
 chmod 777 ./src/com/mohammadaminjavadi/Main.java
-#cd ./src/com/mohammadaminjavadi
+cd ..
 #javac src/Main.java
 #java Main.java
 ./run.sh
