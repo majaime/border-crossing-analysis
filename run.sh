@@ -4,7 +4,7 @@
 # python3.7 ./src/Main.java ./input/Border_Crossing_Entry_data.csv ./output/report.csv
 #cd ./src
 #avac ./src/com/mohammadaminjavadi/Main.java #"./input/Border_Crossing_Entry_data.csv" "./output/report.csv"
-javac ./src/com/mohammadaminjavadi/Main.java -cp ./input/Border_Crossing_Entry_Data.csv -cp ./output/com/mohammadaminjavadi/report.csv
+javac ./src/com/mohammadaminjavadi/Main.java -cp ./input/Border_Crossing_Entry_Data.csv -mkdir ./output/com/mohammadaminjavadi/report.csv
 #java -version
 #javac -version
 
