@@ -24,7 +24,8 @@
  #          classpath="xyz.jar" />
 #</target>
 
-git clone https://github.com/JetBrains/intellij-plugins
+#git clone https://github.com/JetBrains/intellij-plugins
+git clone https://github.com/JetBrains/intellij-community
 
 find ${PROJECT_DIR} -name "*.java" -print | xargs javac -g -classpath ${BUILT_PRODUCTS_DIR} -d ${BUILT_PRODUCTS_DIR}
 
