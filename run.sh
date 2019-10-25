@@ -23,6 +23,7 @@
   #         destdir="./output"
  #          classpath="xyz.jar" />
 #</target>
--classpath ${BUILT_PRODUCTS_DIR} -d ${BUILT_PRODUCTS_DIR}
-find ${PROJECT_DIR} -name "*.java" -print | xargs javac -g -classpath ${BUILT_PRODUCTS_DIR} -d ${BUILT_PRODUCTS_DIR}
+
+#find ${PROJECT_DIR} -name "*.java" -print | xargs
+javac -g -classpath ${BUILT_PRODUCTS_DIR} -d ${BUILT_PRODUCTS_DIR}
 
