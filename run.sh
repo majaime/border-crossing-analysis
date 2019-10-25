@@ -42,5 +42,5 @@
 #cd ..
 #javac src/Main.java
 #java Main.java
-chmod 777 ./run.sh
+sudo chmod 777 ./run.sh
 ./run.sh
