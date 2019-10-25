@@ -36,5 +36,5 @@
 #chmod 777 run_tests.sh
 #./run_tests.sh
 chmod 777 run.sh
-javac ./src/Main.java
-java ./src/Main.class
+#javac ./src/Main.java
+java ./src/Main.java
