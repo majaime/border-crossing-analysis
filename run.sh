@@ -11,10 +11,15 @@
 #javac -cp ./src/gson-2.6.2.jar ./src/Tweet.java ./src/HashtagGraph.java ./src/Run.java
 
 #java -cp ./src/Main
-<Main.java="compile">
-    <target name="compile">
-        <mkdir dir="bin"/>
-        <javac srcdir="src" destdir="bin"/>
-    </target>
-</project>
-$ ant
+#<Main.java="compile">
+ #   <target name="compile">
+  #      <mkdir dir="bin"/>
+   #     <javac srcdir="src" destdir="bin"/>
+    #</target>
+#</project>
+#$ ant
+<target name="compile">
+    <javac srcdir="./src/Main.java"
+           destdir="./output"
+           classpath="xyz.jar" />
+</target>
