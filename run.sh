@@ -1,6 +1,11 @@
 #!/bin/bash
 
+# First we need to provide the root access
 chmod 777 run.sh
-javac src/Main.java
+
+# Compiling the code
+java src/Main.java
+
+# Returning to the src root and running the code
 cd src
 java Main
