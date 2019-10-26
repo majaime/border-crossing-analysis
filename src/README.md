@@ -1,1 +1,1 @@
-This is the directory where your souce code would reside
+The source code (Main.java) is provided in this folder.
