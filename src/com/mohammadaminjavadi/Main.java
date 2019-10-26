@@ -9,14 +9,22 @@ import java.util.Scanner;
 public class Main {
 
     public static void main(String[] args) throws FileNotFoundException {
+        
+        // Reading (scanning) the data from an input folder
+        
         String fileName = "../input/Border_Crossing_Entry_Data.csv";
         File file = new File(fileName);
+        
+        // Providing "try and catch" to prevent the code from any possible crash
+        
         try {
             Scanner inputStream = new Scanner(file);
 
             inputStream.nextLine();
             System.out.println("Border,"+"Date,"+"Measure,"+"Value,"+"Average");
-
+            
+            // A while loop to search for the criteria as per the problem statement and storing the finding in variables
+            
             while (inputStream.hasNextLine()) {
 
                 int x1 = 0;
@@ -52,6 +60,9 @@ public class Main {
                 } else if (dataStr[3].equals("US-Mexico Border") && dataStr[4].equals("01/01/2019 12:00:00 AM") && dataStr[5].equals("Pedestrians")) {
                     x6 = Integer.parseInt(dataStr[6]);
                     System.out.println("US-Mexico Border," + "01/01/2019 12:00:00 AM," + "Pedestrians," + x6 + "," + 0);
+                    
+                    // Writing the findings in a csv file in an output folder
+                    
                     FileOutputStream fos = new FileOutputStream("../output/report.csv", true);
                     PrintWriter pw = new PrintWriter(fos);
                     pw.println("Border, Date, Measure, Value, Average");
