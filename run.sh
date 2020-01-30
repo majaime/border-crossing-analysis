@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # First we need to provide the root access
-sudo Chmod 777 run.sh
+Chmod 777 run.sh
 
 # Compiling the code
 java src/Main.java
